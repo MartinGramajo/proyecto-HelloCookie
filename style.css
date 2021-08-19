@@ -1,0 +1,502 @@
+body {
+    min-height: 100vh;
+    background-image: url(https://thumbs.dreamstime.com/b/fondo-incons%C3%BAtil-con-las-galletas-del-chocolate-ilustraci%C3%B3n-del-vector-89198578.jpg);
+}
+
+/*Css aplicado al modal login*/
+.login-form {
+    width: 340px;
+    margin: 50px auto;
+}
+.login-form form {
+    margin-bottom: 15px;
+    background: #f7f7f7;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+}
+.login-form h2 {
+    margin: 0 0 15px;
+}
+.form-control, .btn {
+    min-height: 38px;
+    border-radius: 2px;
+}
+.btn {        
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/*Css aplicado a las imagenes del carousel*/
+.imageCarousel{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 600px;
+}
+
+/*Css aplicado a las cards */
+/* img{ */
+    /* height:150px; */
+    /* width:100%; */
+/* } */
+
+div [class^="col-"]{
+    padding-left:5px;
+    padding-right:5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 15px;
+    width: 18rem;
+
+}
+.card{
+    transition:0.5s;
+    cursor:pointer;
+}
+.card-title{  
+    font-size:15px;
+    transition:1s;
+    cursor:pointer;
+}
+.card-title i{  
+    font-size:15px;
+    transition:1s;
+    cursor:pointer;
+    color:#ffa710
+}
+.card-title i:hover{
+    transform: scale(1.25) rotate(100deg); 
+    color:#18d4ca;
+    
+}
+.card:hover{
+    transform: scale(1.05);
+    box-shadow: 10px 10px 15px rgba(0,0,0,0.3);
+}
+.card-text{
+    height:80px;  
+}
+
+.card::before, .card::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: scale3d(0, 0, 1);
+    transition: transform .3s ease-out 0s;
+    background: rgba(255, 255, 255, 0.1);
+    content: '';
+    pointer-events: none;
+}
+.card::before {
+    transform-origin: left top;
+}
+.card::after {
+    transform-origin: right bottom;
+}
+.card:hover::before, .card:hover::after, .card:focus::before, .card:focus::after {
+    transform: scale3d(1, 1, 1);
+}
+/*Css aplicado a las cards */
+/* img{ */
+    /* height:150px; */
+    /* width:100%; */
+/* } */
+
+div [class^="col-"]{
+    padding-left:5px;
+    padding-right:5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 15px;
+    width: 18rem;
+
+}
+.card{
+    transition:0.5s;
+    cursor:pointer;
+}
+.card-title{  
+    font-size:15px;
+    transition:1s;
+    cursor:pointer;
+}
+.card-title i{  
+    font-size:15px;
+    transition:1s;
+    cursor:pointer;
+    color:#ffa710
+}
+.card-title i:hover{
+    transform: scale(1.25) rotate(100deg); 
+    color:#18d4ca;
+    
+}
+.card:hover{
+    transform: scale(1.05);
+    box-shadow: 10px 10px 15px rgba(0,0,0,0.3);
+}
+.card-text{
+    height:80px;  
+}
+
+.card::before, .card::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: scale3d(0, 0, 1);
+    transition: transform .3s ease-out 0s;
+    background: rgba(255, 255, 255, 0.1);
+    content: '';
+    pointer-events: none;
+}
+.card::before {
+    transform-origin: left top;
+}
+.card::after {
+    transform-origin: right bottom;
+}
+.card:hover::before, .card:hover::after, .card:focus::before, .card:focus::after {
+    transform: scale3d(1, 1, 1);
+}
+
+/*Css aplicado a las cards */
+.item {
+    border: 2px solid #000;
+    padding: 10px;
+    border-radius: 20px;
+  }
+  
+  .item-title {
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+  }
+  
+  .item-image {
+    height: 200px;
+    width: 100%;
+  }
+  
+  .item-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0px 15px;
+  }
+  
+  .item-details > .item-price {
+    margin: 0;
+  }
+  
+  /* ? SHOPPING CART */
+  .shopping-cart-items {
+    padding: 20px 0px;
+  }
+  
+  .shopping-cart-header {
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .shopping-cart-image {
+    max-width: 80px;
+    border-radius: 20px;
+  }
+  
+  .shopping-cart-quantity-input {
+    max-width: 45px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #eee;
+    padding: 5px;
+  }
+  
+  .shopping-cart-total {
+    min-height: 96px;
+  }
+
+/*Css Aplicado a Publicidad#01*/
+.imagenPublicidad1{
+    margin: auto;
+    margin-bottom: 100px;
+    width: 100%;
+    height: 400px;
+}
+
+/*Css aplicado al contenedor de publicidad#02*/
+.contenedor-publicidad{
+    margin-left: 250px;
+    height: 550px;
+}
+
+/*Css Aplicado a Publicidad#02*/
+.imagenPublicidad02{
+    height: 550px;
+    width: 500px;
+}
+
+/*Css al footer*/
+.footer {
+    margin-top: auto;
+    background:#f8f8f8e8;
+    background-color: rgba(111, 111, 114, 0.144);
+    
+}
+.social-icon {
+    font-size: 3rem;
+}
+
+body {
+    min-height: 100vh;
+    background-image: url(https://thumbs.dreamstime.com/b/fondo-incons%C3%BAtil-con-las-galletas-del-chocolate-ilustraci%C3%B3n-del-vector-89198578.jpg);
+}
+
+/*Css aplicado al modal login*/
+.login-form {
+    width: 340px;
+    margin: 50px auto;
+}
+.login-form form {
+    margin-bottom: 15px;
+    background: #f7f7f7;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+}
+.login-form h2 {
+    margin: 0 0 15px;
+}
+.form-control, .btn {
+    min-height: 38px;
+    border-radius: 2px;
+}
+.btn {        
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/*Css aplicado a las imagenes del carousel*/
+.imageCarousel{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 600px;
+}
+
+/*Css aplicado a las cards */
+/* img{ */
+    /* height:150px; */
+    /* width:100%; */
+/* } */
+
+div [class^="col-"]{
+    padding-left:5px;
+    padding-right:5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 15px;
+    width: 18rem;
+
+}
+.card{
+    transition:0.5s;
+    cursor:pointer;
+}
+.card-title{  
+    font-size:15px;
+    transition:1s;
+    cursor:pointer;
+}
+.card-title i{  
+    font-size:15px;
+    transition:1s;
+    cursor:pointer;
+    color:#ffa710
+}
+.card-title i:hover{
+    transform: scale(1.25) rotate(100deg); 
+    color:#18d4ca;
+    
+}
+.card:hover{
+    transform: scale(1.05);
+    box-shadow: 10px 10px 15px rgba(0,0,0,0.3);
+}
+.card-text{
+    height:80px;  
+}
+
+.card::before, .card::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: scale3d(0, 0, 1);
+    transition: transform .3s ease-out 0s;
+    background: rgba(255, 255, 255, 0.1);
+    content: '';
+    pointer-events: none;
+}
+.card::before {
+    transform-origin: left top;
+}
+.card::after {
+    transform-origin: right bottom;
+}
+.card:hover::before, .card:hover::after, .card:focus::before, .card:focus::after {
+    transform: scale3d(1, 1, 1);
+}
+/*Css aplicado a las cards */
+/* img{ */
+    /* height:150px; */
+    /* width:100%; */
+/* } */
+
+div [class^="col-"]{
+    padding-left:5px;
+    padding-right:5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 15px;
+    width: 18rem;
+
+}
+.card{
+    transition:0.5s;
+    cursor:pointer;
+}
+.card-title{  
+    font-size:15px;
+    transition:1s;
+    cursor:pointer;
+}
+.card-title i{  
+    font-size:15px;
+    transition:1s;
+    cursor:pointer;
+    color:#ffa710
+}
+.card-title i:hover{
+    transform: scale(1.25) rotate(100deg); 
+    color:#18d4ca;
+    
+}
+.card:hover{
+    transform: scale(1.05);
+    box-shadow: 10px 10px 15px rgba(0,0,0,0.3);
+}
+.card-text{
+    height:80px;  
+}
+
+.card::before, .card::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: scale3d(0, 0, 1);
+    transition: transform .3s ease-out 0s;
+    background: rgba(255, 255, 255, 0.1);
+    content: '';
+    pointer-events: none;
+}
+.card::before {
+    transform-origin: left top;
+}
+.card::after {
+    transform-origin: right bottom;
+}
+.card:hover::before, .card:hover::after, .card:focus::before, .card:focus::after {
+    transform: scale3d(1, 1, 1);
+}
+
+/*Css aplicado a las cards */
+.item {
+    border: 2px solid #000;
+    padding: 10px;
+    border-radius: 20px;
+  }
+  
+  .item-title {
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+  }
+  
+  .item-image {
+    height: 200px;
+    width: 100%;
+  }
+  
+  .item-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0px 15px;
+  }
+  
+  .item-details > .item-price {
+    margin: 0;
+  }
+  
+  /* ? SHOPPING CART */
+  .shopping-cart-items {
+    padding: 20px 0px;
+  }
+  
+  .shopping-cart-header {
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .shopping-cart-image {
+    max-width: 80px;
+    border-radius: 20px;
+  }
+  
+  .shopping-cart-quantity-input {
+    max-width: 45px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #eee;
+    padding: 5px;
+  }
+  
+  .shopping-cart-total {
+    min-height: 96px;
+  }
+
+/*Css Aplicado a Publicidad#01*/
+.imagenPublicidad1{
+    margin: auto;
+    margin-bottom: 100px;
+    width: 100%;
+    height: 400px;
+}
+
+/*Css aplicado al contenedor de publicidad#02*/
+.contenedor-publicidad{
+    margin-left: 250px;
+    height: 550px;
+}
+
+/*Css Aplicado a Publicidad#02*/
+.imagenPublicidad02{
+    height: 550px;
+    width: 500px;
+}
+
+/*Css al footer*/
+.footer {
+    margin-top: auto;
+    background:#f8f8f8e8;
+    background-color: rgba(111, 111, 114, 0.144);
+    
+}
+.social-icon {
+    font-size: 3rem;
+}
+
