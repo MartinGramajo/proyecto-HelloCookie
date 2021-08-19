@@ -30,9 +30,8 @@ body {
 /*Css aplicado a las imagenes del carousel*/
 .imageCarousel {
     display: block;
-    position: relative;
-    width: 100%;
-    height: 600px;
+    width: 400px;
+    height: 300px;
 }
 
 /*Css aplicado a las cards */
