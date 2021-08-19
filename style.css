@@ -17,17 +17,18 @@ body {
 .login-form h2 {
     margin: 0 0 15px;
 }
-.form-control, .btn {
+.form-control,
+.btn {
     min-height: 38px;
     border-radius: 2px;
 }
-.btn {        
+.btn {
     font-size: 15px;
     font-weight: bold;
 }
 
 /*Css aplicado a las imagenes del carousel*/
-.imageCarousel{
+.imageCarousel {
     display: block;
     position: relative;
     width: 100%;
@@ -36,57 +37,56 @@ body {
 
 /*Css aplicado a las cards */
 /* img{ */
-    /* height:150px; */
-    /* width:100%; */
+/* height:150px; */
+/* width:100%; */
 /* } */
 
-div [class^="col-"]{
-    padding-left:5px;
-    padding-right:5px;
+div [class^="col-"] {
+    padding-left: 5px;
+    padding-right: 5px;
     margin-left: 10px;
     margin-right: 10px;
     margin-bottom: 15px;
     width: 18rem;
-
 }
-.card{
-    transition:0.5s;
-    cursor:pointer;
+.card {
+    transition: 0.5s;
+    cursor: pointer;
 }
-.card-title{  
-    font-size:15px;
-    transition:1s;
-    cursor:pointer;
+.card-title {
+    font-size: 15px;
+    transition: 1s;
+    cursor: pointer;
 }
-.card-title i{  
-    font-size:15px;
-    transition:1s;
-    cursor:pointer;
-    color:#ffa710
+.card-title i {
+    font-size: 15px;
+    transition: 1s;
+    cursor: pointer;
+    color: #ffa710;
 }
-.card-title i:hover{
-    transform: scale(1.25) rotate(100deg); 
-    color:#18d4ca;
-    
+.card-title i:hover {
+    transform: scale(1.25) rotate(100deg);
+    color: #18d4ca;
 }
-.card:hover{
+.card:hover {
     transform: scale(1.05);
-    box-shadow: 10px 10px 15px rgba(0,0,0,0.3);
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
 }
-.card-text{
-    height:80px;  
+.card-text {
+    height: 80px;
 }
 
-.card::before, .card::after {
+.card::before,
+.card::after {
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     transform: scale3d(0, 0, 1);
-    transition: transform .3s ease-out 0s;
+    transition: transform 0.3s ease-out 0s;
     background: rgba(255, 255, 255, 0.1);
-    content: '';
+    content: "";
     pointer-events: none;
 }
 .card::before {
@@ -95,62 +95,64 @@ div [class^="col-"]{
 .card::after {
     transform-origin: right bottom;
 }
-.card:hover::before, .card:hover::after, .card:focus::before, .card:focus::after {
+.card:hover::before,
+.card:hover::after,
+.card:focus::before,
+.card:focus::after {
     transform: scale3d(1, 1, 1);
 }
 /*Css aplicado a las cards */
 /* img{ */
-    /* height:150px; */
-    /* width:100%; */
+/* height:150px; */
+/* width:100%; */
 /* } */
 
-div [class^="col-"]{
-    padding-left:5px;
-    padding-right:5px;
+div [class^="col-"] {
+    padding-left: 5px;
+    padding-right: 5px;
     margin-left: 10px;
     margin-right: 10px;
     margin-bottom: 15px;
     width: 18rem;
-
 }
-.card{
-    transition:0.5s;
-    cursor:pointer;
+.card {
+    transition: 0.5s;
+    cursor: pointer;
 }
-.card-title{  
-    font-size:15px;
-    transition:1s;
-    cursor:pointer;
+.card-title {
+    font-size: 15px;
+    transition: 1s;
+    cursor: pointer;
 }
-.card-title i{  
-    font-size:15px;
-    transition:1s;
-    cursor:pointer;
-    color:#ffa710
+.card-title i {
+    font-size: 15px;
+    transition: 1s;
+    cursor: pointer;
+    color: #ffa710;
 }
-.card-title i:hover{
-    transform: scale(1.25) rotate(100deg); 
-    color:#18d4ca;
-    
+.card-title i:hover {
+    transform: scale(1.25) rotate(100deg);
+    color: #18d4ca;
 }
-.card:hover{
+.card:hover {
     transform: scale(1.05);
-    box-shadow: 10px 10px 15px rgba(0,0,0,0.3);
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
 }
-.card-text{
-    height:80px;  
+.card-text {
+    height: 80px;
 }
 
-.card::before, .card::after {
+.card::before,
+.card::after {
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     transform: scale3d(0, 0, 1);
-    transition: transform .3s ease-out 0s;
+    transition: transform 0.3s ease-out 0s;
     background: rgba(255, 255, 255, 0.1);
-    content: '';
+    content: "";
     pointer-events: none;
 }
 .card::before {
@@ -159,7 +161,10 @@ div [class^="col-"]{
 .card::after {
     transform-origin: right bottom;
 }
-.card:hover::before, .card:hover::after, .card:focus::before, .card:focus::after {
+.card:hover::before,
+.card:hover::after,
+.card:focus::before,
+.card:focus::after {
     transform: scale3d(1, 1, 1);
 }
 
@@ -168,58 +173,58 @@ div [class^="col-"]{
     border: 2px solid #000;
     padding: 10px;
     border-radius: 20px;
-  }
-  
-  .item-title {
+}
+
+.item-title {
     text-transform: uppercase;
     text-align: center;
     font-weight: 600;
-  }
-  
-  .item-image {
+}
+
+.item-image {
     height: 200px;
     width: 100%;
-  }
-  
-  .item-details {
+}
+
+.item-details {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 20px 0px 15px;
-  }
-  
-  .item-details > .item-price {
+}
+
+.item-details > .item-price {
     margin: 0;
-  }
-  
-  /* ? SHOPPING CART */
-  .shopping-cart-items {
+}
+
+/* ? SHOPPING CART */
+.shopping-cart-items {
     padding: 20px 0px;
-  }
-  
-  .shopping-cart-header {
+}
+
+.shopping-cart-header {
     border-bottom: 1px solid #ccc;
-  }
-  
-  .shopping-cart-image {
+}
+
+.shopping-cart-image {
     max-width: 80px;
     border-radius: 20px;
-  }
-  
-  .shopping-cart-quantity-input {
+}
+
+.shopping-cart-quantity-input {
     max-width: 45px;
     border: 1px solid #ccc;
     border-radius: 5px;
     background: #eee;
     padding: 5px;
-  }
-  
-  .shopping-cart-total {
+}
+
+.shopping-cart-total {
     min-height: 96px;
-  }
+}
 
 /*Css Aplicado a Publicidad#01*/
-.imagenPublicidad1{
+.imagenPublicidad1 {
     margin: auto;
     margin-bottom: 100px;
     width: 100%;
@@ -227,13 +232,13 @@ div [class^="col-"]{
 }
 
 /*Css aplicado al contenedor de publicidad#02*/
-.contenedor-publicidad{
+.contenedor-publicidad {
     margin-left: 250px;
     height: 550px;
 }
 
 /*Css Aplicado a Publicidad#02*/
-.imagenPublicidad02{
+.imagenPublicidad02 {
     height: 550px;
     width: 500px;
 }
@@ -241,9 +246,8 @@ div [class^="col-"]{
 /*Css al footer*/
 .footer {
     margin-top: auto;
-    background:#f8f8f8e8;
+    background: #f8f8f8e8;
     background-color: rgba(111, 111, 114, 0.144);
-    
 }
 .social-icon {
     font-size: 3rem;
@@ -268,17 +272,18 @@ body {
 .login-form h2 {
     margin: 0 0 15px;
 }
-.form-control, .btn {
+.form-control,
+.btn {
     min-height: 38px;
     border-radius: 2px;
 }
-.btn {        
+.btn {
     font-size: 15px;
     font-weight: bold;
 }
 
 /*Css aplicado a las imagenes del carousel*/
-.imageCarousel{
+.imageCarousel {
     display: block;
     position: relative;
     width: 100%;
@@ -287,57 +292,56 @@ body {
 
 /*Css aplicado a las cards */
 /* img{ */
-    /* height:150px; */
-    /* width:100%; */
+/* height:150px; */
+/* width:100%; */
 /* } */
 
-div [class^="col-"]{
-    padding-left:5px;
-    padding-right:5px;
+div [class^="col-"] {
+    padding-left: 5px;
+    padding-right: 5px;
     margin-left: 10px;
     margin-right: 10px;
     margin-bottom: 15px;
     width: 18rem;
-
 }
-.card{
-    transition:0.5s;
-    cursor:pointer;
+.card {
+    transition: 0.5s;
+    cursor: pointer;
 }
-.card-title{  
-    font-size:15px;
-    transition:1s;
-    cursor:pointer;
+.card-title {
+    font-size: 15px;
+    transition: 1s;
+    cursor: pointer;
 }
-.card-title i{  
-    font-size:15px;
-    transition:1s;
-    cursor:pointer;
-    color:#ffa710
+.card-title i {
+    font-size: 15px;
+    transition: 1s;
+    cursor: pointer;
+    color: #ffa710;
 }
-.card-title i:hover{
-    transform: scale(1.25) rotate(100deg); 
-    color:#18d4ca;
-    
+.card-title i:hover {
+    transform: scale(1.25) rotate(100deg);
+    color: #18d4ca;
 }
-.card:hover{
+.card:hover {
     transform: scale(1.05);
-    box-shadow: 10px 10px 15px rgba(0,0,0,0.3);
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
 }
-.card-text{
-    height:80px;  
+.card-text {
+    height: 80px;
 }
 
-.card::before, .card::after {
+.card::before,
+.card::after {
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     transform: scale3d(0, 0, 1);
-    transition: transform .3s ease-out 0s;
+    transition: transform 0.3s ease-out 0s;
     background: rgba(255, 255, 255, 0.1);
-    content: '';
+    content: "";
     pointer-events: none;
 }
 .card::before {
@@ -346,62 +350,64 @@ div [class^="col-"]{
 .card::after {
     transform-origin: right bottom;
 }
-.card:hover::before, .card:hover::after, .card:focus::before, .card:focus::after {
+.card:hover::before,
+.card:hover::after,
+.card:focus::before,
+.card:focus::after {
     transform: scale3d(1, 1, 1);
 }
 /*Css aplicado a las cards */
 /* img{ */
-    /* height:150px; */
-    /* width:100%; */
+/* height:150px; */
+/* width:100%; */
 /* } */
 
-div [class^="col-"]{
-    padding-left:5px;
-    padding-right:5px;
+div [class^="col-"] {
+    padding-left: 5px;
+    padding-right: 5px;
     margin-left: 10px;
     margin-right: 10px;
     margin-bottom: 15px;
     width: 18rem;
-
 }
-.card{
-    transition:0.5s;
-    cursor:pointer;
+.card {
+    transition: 0.5s;
+    cursor: pointer;
 }
-.card-title{  
-    font-size:15px;
-    transition:1s;
-    cursor:pointer;
+.card-title {
+    font-size: 15px;
+    transition: 1s;
+    cursor: pointer;
 }
-.card-title i{  
-    font-size:15px;
-    transition:1s;
-    cursor:pointer;
-    color:#ffa710
+.card-title i {
+    font-size: 15px;
+    transition: 1s;
+    cursor: pointer;
+    color: #ffa710;
 }
-.card-title i:hover{
-    transform: scale(1.25) rotate(100deg); 
-    color:#18d4ca;
-    
+.card-title i:hover {
+    transform: scale(1.25) rotate(100deg);
+    color: #18d4ca;
 }
-.card:hover{
+.card:hover {
     transform: scale(1.05);
-    box-shadow: 10px 10px 15px rgba(0,0,0,0.3);
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
 }
-.card-text{
-    height:80px;  
+.card-text {
+    height: 80px;
 }
 
-.card::before, .card::after {
+.card::before,
+.card::after {
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     transform: scale3d(0, 0, 1);
-    transition: transform .3s ease-out 0s;
+    transition: transform 0.3s ease-out 0s;
     background: rgba(255, 255, 255, 0.1);
-    content: '';
+    content: "";
     pointer-events: none;
 }
 .card::before {
@@ -410,7 +416,10 @@ div [class^="col-"]{
 .card::after {
     transform-origin: right bottom;
 }
-.card:hover::before, .card:hover::after, .card:focus::before, .card:focus::after {
+.card:hover::before,
+.card:hover::after,
+.card:focus::before,
+.card:focus::after {
     transform: scale3d(1, 1, 1);
 }
 
@@ -419,58 +428,58 @@ div [class^="col-"]{
     border: 2px solid #000;
     padding: 10px;
     border-radius: 20px;
-  }
-  
-  .item-title {
+}
+
+.item-title {
     text-transform: uppercase;
     text-align: center;
     font-weight: 600;
-  }
-  
-  .item-image {
+}
+
+.item-image {
     height: 200px;
     width: 100%;
-  }
-  
-  .item-details {
+}
+
+.item-details {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 20px 0px 15px;
-  }
-  
-  .item-details > .item-price {
+}
+
+.item-details > .item-price {
     margin: 0;
-  }
-  
-  /* ? SHOPPING CART */
-  .shopping-cart-items {
+}
+
+/* ? SHOPPING CART */
+.shopping-cart-items {
     padding: 20px 0px;
-  }
-  
-  .shopping-cart-header {
+}
+
+.shopping-cart-header {
     border-bottom: 1px solid #ccc;
-  }
-  
-  .shopping-cart-image {
+}
+
+.shopping-cart-image {
     max-width: 80px;
     border-radius: 20px;
-  }
-  
-  .shopping-cart-quantity-input {
+}
+
+.shopping-cart-quantity-input {
     max-width: 45px;
     border: 1px solid #ccc;
     border-radius: 5px;
     background: #eee;
     padding: 5px;
-  }
-  
-  .shopping-cart-total {
+}
+
+.shopping-cart-total {
     min-height: 96px;
-  }
+}
 
 /*Css Aplicado a Publicidad#01*/
-.imagenPublicidad1{
+.imagenPublicidad1 {
     margin: auto;
     margin-bottom: 100px;
     width: 100%;
@@ -478,13 +487,13 @@ div [class^="col-"]{
 }
 
 /*Css aplicado al contenedor de publicidad#02*/
-.contenedor-publicidad{
+.contenedor-publicidad {
     margin-left: 250px;
     height: 550px;
 }
 
 /*Css Aplicado a Publicidad#02*/
-.imagenPublicidad02{
+.imagenPublicidad02 {
     height: 550px;
     width: 500px;
 }
@@ -492,11 +501,9 @@ div [class^="col-"]{
 /*Css al footer*/
 .footer {
     margin-top: auto;
-    background:#f8f8f8e8;
+    background: #f8f8f8e8;
     background-color: rgba(111, 111, 114, 0.144);
-    
 }
 .social-icon {
     font-size: 3rem;
 }
-

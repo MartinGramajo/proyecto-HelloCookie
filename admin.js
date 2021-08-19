@@ -6,16 +6,16 @@ const imagenInput = document.getElementById('formImagen');
 const descripcionInput = document.getElementById('inputDescripcion');
 const productosTabla = document.getElementById('tabla');
 
-const editarForm = document.getElementById('formularioEditar'); 
+const editarForm = document.getElementById('formularioEditar');
 const editarNombreInput = document.getElementById('editarNombre');
 const editarMarcaInput = document.getElementById('editarMarca');
 const editarPrecioInput = document.getElementById('editarPrecio');
-const editarImagenInput = document.getElementById('editarFormImagen'); 
+const editarImagenInput = document.getElementById('editarFormImagen');
 const editarDescripcionInput = document.getElementById('editarInputDescripcion');
 
 const busquedaForm = document.getElementById('formBusqueda');
 
-const productoPaginaPrincipal = document.getElementById('agregarProducto'); 
+const productoPaginaPrincipal = document.getElementById('agregarProducto');
 
 const json = localStorage.getItem('productos');
 let productos = JSON.parse(json) || [];
@@ -25,23 +25,23 @@ let productoId = '';
 // Funcion generar ID del producto 
 function generarID() {
     return '_' + Math.random().toString(36).substr(2, 9);
-}; 
+};
 
 // Funcion Alta producto 
 const submitAlta = (e) => {
-    e.preventDefault(); 
+    e.preventDefault();
     const producto = {
         id: generarID(),
         nombre: nombreInputProducto.value,
         marca: marcaInput.value,
         precio: precioInput.value,
         imagen: imagenInput.value,
-        detalle:descripcionInput.value,
+        detalle: descripcionInput.value,
         registro: Date.now(),
     };
     productos.push(producto);
     const json = JSON.stringify(productos);
-    localStorage.setItem('productos',json); 
+    localStorage.setItem('productos', json);
     mostrarProductos();
     formularioAlta.reset();
 };
@@ -69,7 +69,7 @@ function mostrarProductos() {
 
 // funcion para mostrar detalle. 
 function mostrarDetalle(id) {
-    const productoEncontrado = productos.find((producto) => producto.id === id); 
+    const productoEncontrado = productos.find((producto) => producto.id === id);
     const detallesDiv = document.getElementById('detalleProducto');
     const fecha = new Date(productoEncontrado.registro);
     const detallesProducto = `
@@ -85,24 +85,24 @@ function mostrarDetalle(id) {
 
 // Funcion eliminar Producto. 
 function eliminarProducto(id) {
-    const confirmar = confirm('Confirmar para eliminar el producto'); 
+    const confirmar = confirm('Confirmar para eliminar el producto');
     if (!confirmar) {
         return
     }
-    const productosLocal = JSON.parse(localStorage.getItem('productos')); 
+    const productosLocal = JSON.parse(localStorage.getItem('productos'));
     const productosFiltrados = productosLocal.filter((producto) => producto.id !== id);
     const json = JSON.stringify(productosFiltrados);
-    localStorage.setItem('productos',json); 
+    localStorage.setItem('productos', json);
     productos = productosFiltrados;
     mostrarProductos();
 }
 
 // funcion para precargar el modal con los datos previamente ingresado del producto. 
-function cargarModalEditar (id) {
-    const productoEncontrado = productos.find((producto) => producto.id === id); 
-    editarNombreInput.value = productoEncontrado.nombre; 
-    editarMarcaInput.value = productoEncontrado.marca; 
-    editarPrecioInput.value = productoEncontrado.precio; 
+function cargarModalEditar(id) {
+    const productoEncontrado = productos.find((producto) => producto.id === id);
+    editarNombreInput.value = productoEncontrado.nombre;
+    editarMarcaInput.value = productoEncontrado.marca;
+    editarPrecioInput.value = productoEncontrado.precio;
     editarImagenInput.value = productoEncontrado.imagen;
     editarDescripcionInput.value = productoEncontrado.detalle;
     productoId = productoEncontrado.id;
@@ -110,27 +110,27 @@ function cargarModalEditar (id) {
 
 // funcion para editar el producto. 
 function editarProducto(e) {
-    e.preventDefault(); 
+    e.preventDefault();
     const productosModificados = productos.map((producto) => {
         if (producto.id === productoId) {
             const productoModificado = {
-                ...producto, 
-                nombre: editarNombreInput.value, 
-                marca: editarMarcaInput.value, 
-                precio: editarPrecioInput.value, 
-                imagen: editarImagenInput.value, 
-                detalle: editarDescripcionInput.value,  
+                ...producto,
+                nombre: editarNombreInput.value,
+                marca: editarMarcaInput.value,
+                precio: editarPrecioInput.value,
+                imagen: editarImagenInput.value,
+                detalle: editarDescripcionInput.value,
             };
-            return productoModificado; 
+            return productoModificado;
         } else {
-            return producto; 
+            return producto;
         }
     })
     const json = JSON.stringify(productosModificados);
     localStorage.setItem('productos', json);
     productos = productosModificados;
     console.log('Se modificó exitosamente un usuario. 👨‍💻');
-    mostrarProductos(); 
+    mostrarProductos();
     const modalDiv = document.getElementById('modalEditar');
     const modalBootstrap = bootstrap.Modal.getInstance(modalDiv);
     modalBootstrap.hide();
@@ -139,31 +139,31 @@ function editarProducto(e) {
 //funcion  busqueda producto 
 const submitBusqueda = (e) => {
     e.preventDefault();
-    const productosLocal = JSON.parse(localStorage.getItem('productos') || []); 
-    const busquedaInput = document.getElementById('busqueda'); 
-    const termino = busquedaInput.value.toLowerCase(); 
+    const productosLocal = JSON.parse(localStorage.getItem('productos') || []);
+    const busquedaInput = document.getElementById('busqueda');
+    const termino = busquedaInput.value.toLowerCase();
     const productosFiltrados = productosLocal.filter((producto) => {
         const nombreEnMinuscula = producto.nombre.toLowerCase();
         const marcaEnMinuscula = producto.marca.toLowerCase();
-        const detallesEnMinuscula = producto.detalle.toLowerCase(); 
+        const detallesEnMinuscula = producto.detalle.toLowerCase();
         return nombreEnMinuscula.includes(termino) || marcaEnMinuscula.includes(termino) || detallesEnMinuscula.includes(termino);
     });
-        productos = productosFiltrados; 
-        mostrarProductos();
-        const alerta = document.getElementById('alertaBusqueda');
-        if (productosFiltrados.length === 0) {
-            alerta.classList.remove('d-none'); 
-        } else {
-            alerta.classList.add('d-none');
-        }
+    productos = productosFiltrados;
+    mostrarProductos();
+    const alerta = document.getElementById('alertaBusqueda');
+    if (productosFiltrados.length === 0) {
+        alerta.classList.remove('d-none');
+    } else {
+        alerta.classList.add('d-none');
+    }
 }
 
 //funcion para limpiar el historial de busqueda. 
 const limpiarFiltro = () => {
-    productos = JSON.parse(localStorage.getItem('productos')) || []; 
-    busquedaForm.reset(); 
+    productos = JSON.parse(localStorage.getItem('productos')) || [];
+    busquedaForm.reset();
     mostrarProductos();
-    const alerta = document.getElementById('alertaBusqueda'); 
+    const alerta = document.getElementById('alertaBusqueda');
     alerta.classList.add('d-none')
 }
 
