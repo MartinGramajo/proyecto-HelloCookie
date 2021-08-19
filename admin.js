@@ -167,10 +167,7 @@ const limpiarFiltro = () => {
     alerta.classList.add('d-none')
 }
 
-//funcion para mostrar producto en principal
-function mostrarEnPrincipal() {
-    
-}
+
 
 mostrarProductos();
 formularioAlta.onsubmit = submitAlta;

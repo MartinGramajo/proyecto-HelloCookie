@@ -5,7 +5,7 @@ const tablaUsuario = document.getElementById("tablaUser");
 const cardProducto = document.getElementById("mostrarElemento");
 
 const json = localStorage.getItem("productos");
-let productos = JSON.parse(json) || [];
+let productos = JSON.parse(json) || [ ];
 
 const admin = {
     username: "admin",
